@@ -1,6 +1,6 @@
 context:
   name: mopaint
-  version: "0.2.1"
+  version: "0.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 77f8e0365dff12a25ebabca158a5e8d5ad9d1f453254e7dd3cb451024956151d
+  sha256: 92e2725255ee6ed37a26dce11e04a1c4e44359f8f67fd94c24d956dc25ea9569
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
 tests:
   - python:
       imports:
-      - mopaint
+        - mopaint
       pip_check: true
       python_version: ${{ python_min }}.*
 
